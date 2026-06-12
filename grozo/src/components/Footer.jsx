@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { IconMapPin, IconPhone, IconWhatsApp } from './icons.jsx';
 
 export default function Footer() {

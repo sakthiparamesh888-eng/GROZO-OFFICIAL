@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch.js';
 import { getBanners, getCategories, getFeatured } from '../services/api.js';
 import { useProducts } from '../hooks/useProducts.js';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { isTrue } from '../utils/format.js';
 
 import BannerSlider from '../components/BannerSlider.jsx';

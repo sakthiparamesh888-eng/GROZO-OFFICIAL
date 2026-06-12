@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { saveOrder } from '../services/api.js';
 import { rupee, effectivePrice, unitLabel } from '../utils/format.js';
 import { buildOrderMessage, whatsappLink } from '../utils/whatsapp.js';

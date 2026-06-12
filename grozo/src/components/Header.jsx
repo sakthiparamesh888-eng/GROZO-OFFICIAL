@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import SearchBar from './SearchBar.jsx';
 import { useCart } from '../context/CartContext.jsx';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { IconCart, IconPhone, IconWhatsApp } from './icons.jsx';
 
 export default function Header() {

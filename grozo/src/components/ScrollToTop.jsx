@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { IconWhatsApp } from './icons.jsx';
 
 export function ScrollToTop() {

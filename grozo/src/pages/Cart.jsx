@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
-import { useSettings } from '../hooks/useSettings.js';
+import { useSettings } from '../hooks/useSettings.jsx';
 import { rupee, effectivePrice, hasOffer, unitLabel } from '../utils/format.js';
 import QuantitySelector from '../components/QuantitySelector.jsx';
 import { IconTrash } from '../components/icons.jsx';
