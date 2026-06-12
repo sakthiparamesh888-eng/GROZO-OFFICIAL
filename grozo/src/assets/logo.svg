@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GROZO logo">
+  <circle cx="60" cy="60" r="58" fill="#2E7D32"/>
+  <path d="M60 28c-14 0-26 8-32 22 14 2 24 8 32 22 8-14 18-20 32-22-6-14-18-22-32-22z" fill="#A5D6A7"/>
+  <path d="M60 30v44" stroke="#1B5E20" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 50c6 2 11 5 16 12M76 50c-6 2-11 5-16 12" stroke="#1B5E20" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M40 78h40l-5 14H45l-5-14z" fill="#FFFFFF"/>
+  <path d="M40 78h40" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+</svg>
