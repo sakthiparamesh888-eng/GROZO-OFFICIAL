@@ -975,6 +975,49 @@ h4 {
   opacity: 0.85;
 }
 
+.trust-dynamic > p {
+  max-width: 660px;
+  margin: 12px auto 0;
+  opacity: 0.9;
+}
+
+.trust-stats-dynamic {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.trust-stats-dynamic .trust-stat {
+  padding: 14px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.trust-stat-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 8px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--green-900);
+  background: var(--green-100);
+}
+
+.trust-stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 760px) {
+  .trust-stats-dynamic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-stats-dynamic .trust-stat:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
 .contact-grid {
   display: grid;
   gap: 14px;

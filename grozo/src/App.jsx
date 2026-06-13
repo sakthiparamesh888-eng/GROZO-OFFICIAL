@@ -1,7 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-import { ScrollToTop, FloatingWhatsApp } from './components/ScrollToTop.jsx';
+import { ScrollToTop } from './components/ScrollToTop.jsx';
+import PopupBanner from './components/PopupBanner';
+import popupBanner from './assets/banners/popup-banner.jpg';
+import {
+  ExitIntentPopup,
+  FloatingSocialBar
+} from './components/SocialMarketing';
 
 import Home from './pages/Home.jsx';
 import ProductDetails from './pages/ProductDetails.jsx';
@@ -14,6 +20,14 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <PopupBanner
+        title="Fresh Vegetables Delivered"
+        subtitle="Special Offer"
+        description="Get up to 40% OFF on fresh fruits and vegetables."
+        buttonText="Shop Now"
+        image={popupBanner}
+        buttonLink="/"
+      />
       <Header />
       <main>
         <Routes>
@@ -41,7 +55,8 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingSocialBar />
+      <ExitIntentPopup />
     </>
   );
 }

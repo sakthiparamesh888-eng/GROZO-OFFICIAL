@@ -48,6 +48,7 @@ export const getProducts = () => apiGet({ action: 'products' });
 export const getProduct = (id) => apiGet({ action: 'product', id });
 export const getCategories = () => apiGet({ action: 'categories' });
 export const getBanners = () => apiGet({ action: 'banners' });
+export const getSocialMedia = () => apiGet({ action: 'socialMedia' });
 export const getSettings = () => apiGet({ action: 'settings' });
 export const getFeatured = () => apiGet({ action: 'featured' });
 export const searchProducts = (q) =>

@@ -11,6 +11,8 @@
  *                origin | description | featured | active
  *    Categories  id | name | image | active
  *    Banners     id | image | title | subtitle | active
+ *    SocialMedia platform | title | url | thumbnail | icon |
+ *                followers | active
  *    Settings    key | value
  *    Orders      order_id | date | customer_name | phone |
  *                address | items | total | status   (+ optional notes)
@@ -30,6 +32,7 @@
  *    ?action=product&id=1
  *    ?action=categories
  *    ?action=banners
+ *    ?action=socialMedia
  *    ?action=settings
  *    ?action=featured
  *    ?action=search&q=carrot
@@ -72,6 +75,8 @@ function handle(e, params, body) {
         return json({ ok: true, data: getActiveRows('Categories') });
       case 'banners':
         return json({ ok: true, data: getActiveRows('Banners') });
+      case 'socialMedia':
+        return json({ ok: true, data: getActiveRows('SocialMedia') });
       case 'settings':
         return json({ ok: true, data: getRows('Settings') });
       case 'featured':
@@ -341,6 +346,28 @@ function setupSheets() {
       ['delivery_message', 'No Delivery Charges'],
       ['hero_title', 'Fresh From Farmer'],
       ['hero_subtitle', 'Direct Farm Fresh Vegetables & Fruits']
+    ]
+  );
+
+  ensure(
+    'SocialMedia',
+    ['platform', 'title', 'url', 'thumbnail', 'icon', 'followers', 'active'],
+    [
+      ['instagram', 'Follow Us On Instagram|Daily Fresh Vegetable Updates|Farm Photos|Customer Reviews|Special Offers', 'https://instagram.com/your-grozo-page', '', 'instagram', '10K+ followers', 'TRUE'],
+      ['youtube', 'Watch Our Farm Videos|Harvest Videos|Packing Process|Daily Arrivals|Farmer Stories', 'https://youtube.com/@your-grozo-channel', '', 'youtube', '5K+ subscribers', 'TRUE'],
+      ['whatsapp', 'Order Directly On WhatsApp|Instant Support|Quick Orders|Fast Response', 'https://wa.me/919876543210', '', 'whatsapp', '', 'TRUE'],
+      ['call', 'Call GROZO', 'tel:+919876543210', '', 'phone', '', 'TRUE'],
+      ['instagram_reel', 'Today Fresh Vegetable Arrival', 'https://instagram.com/your-grozo-page', 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800', 'instagram', '', 'TRUE'],
+      ['youtube_video', 'Morning Harvest From Our Farms', 'https://youtube.com/@your-grozo-channel', 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=800', 'youtube', '', 'TRUE'],
+      ['config_heading', 'Join The GROZO Family', '', '', '', '', 'TRUE'],
+      ['config_subheading', 'Get daily fresh arrival updates, farm videos, offers and market prices directly from our farms.', '', '', '', '', 'TRUE'],
+      ['config_instagram_heading', 'Latest Instagram Reels', '', '', '', '', 'TRUE'],
+      ['config_youtube_heading', 'Latest From GROZO Farms', '', '', '', '', 'TRUE'],
+      ['metric_customers', 'Happy Customers', '', '', 'users', '1000+', 'TRUE'],
+      ['metric_orders', 'Orders Delivered', '', '', 'orders', '5000+', 'TRUE'],
+      ['metric_delivery', 'Delivery Charges', '', '', 'truck', '0', 'TRUE'],
+      ['metric_rating', 'Customer Rating', '', '', 'star', '4.9', 'TRUE'],
+      ['metric_farmers', 'Direct From Farmers', '', '', 'leaf', '100%', 'TRUE']
     ]
   );
 

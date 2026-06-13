@@ -12,6 +12,9 @@ import FarmCollection from '../components/FarmCollection.jsx';
 import WhyChooseUs from '../components/WhyChooseUs.jsx';
 import TrustSection from '../components/TrustSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
+import SocialMarketing, {
+  HeroSocialLinks
+} from '../components/SocialMarketing';
 import { IconArrow } from '../components/icons.jsx';
 
 // Match a product's origin against a place name, case-insensitively.
@@ -62,6 +65,7 @@ export default function Home() {
                 Shop Fresh <IconArrow style={{ width: 18, height: 18 }} />
               </a>
             </div>
+            <HeroSocialLinks />
           </div>
         </div>
       </section>
@@ -81,6 +85,8 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      <SocialMarketing />
 
       {/* Categories */}
       <section className="section">
